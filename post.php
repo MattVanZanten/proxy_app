@@ -9,6 +9,8 @@ if ( isset( $_GET['ip'] ) ) {
   if ( $valid === true ) {
     $ip_cidr = "{$_GET['ip']}/32";
     file_put_contents($file, $ip_cidr);
+  } else {
+    echo 'hi';
   }
 }
 ?>
