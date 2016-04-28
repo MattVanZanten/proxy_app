@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 require_once('./config.php');
 require_once('./functions.php');
 if ( isset( $_GET['ip'] ) ) {
-  if ( check_ip_match($_GET['ip'], $file) === true ) {
+  if ( check_ip_match($_GET['ip'], $file) === false ) {
     $valid = preg_match( '/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/', $_GET['ip'] );
     if ( $valid === true ) {
       $ip_cidr = "{$_GET['ip']}/32";
